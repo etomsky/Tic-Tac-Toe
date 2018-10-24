@@ -5,25 +5,78 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
+    GameObject haloGO;
+    public GameObject xPieceGO;
+    public GameObject oPieceGo;
+    public Button letter;
+    public string playerSide; 
     public Text countXText;
     public Text countOText;
-    public Text winText;
+    public Text turnText;
+    public Text playerXWinText;
+    public Text playerOWinText;
 
-    private Rigidbody rb;
     private int countX;
     private int countO;
+    private object playerXTurn;
+    private object playerOTurn;
 
-	// Use this for initialization
-	void Start()
+    public void SetSpace()
     {
-        rb = GetComponent<Rigidbody>();
+        letter.interactable = false;
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+        haloGO = GameObject.Find("HaloObject");
+        haloGO.SetActive(false);
         countX = 0;
         countO = 0;
         SetCountXText();
         SetCountOText();
         countXText.text = "";
         countOText.text = "";
-        winText.text = "";
+        turnText.text = "";
+        playerXWinText.text = "";
+        playerOWinText.text = "";
+        oPieceGo = GameObject.Find("O");
+        xPieceGO = GameObject.Find("X");
+    }
+
+    private void OnMouseEnter()
+    {
+        if (haloGO != null)
+        {
+            haloGO.SetActive(true);
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (haloGO != null)
+        {
+            haloGO.SetActive(false);
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        if(turn = playerXTurn)
+        {
+            GameObject tempGO = Instantiate(xPieceGO);
+            tempGO.transform.position = this.gameObject.transform.position;
+            Destroy(haloGO);
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+
+        if(turn = playerOTurn)
+        {
+            GameObject tempGO = Instantiate(oPieceGO);
+            tempGO.transform.position = this.gameObject.transform.position;
+            Destroy(haloGO);
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -47,7 +100,7 @@ public class PlayerController : MonoBehaviour {
         countXText.text = "X Count: " + countX.ToString();
         if (countX == 3)
         {
-            winText.text = "You win!";
+            playerXWinText.text = "Player X Wins!";
         }
     }
 
@@ -56,7 +109,12 @@ public class PlayerController : MonoBehaviour {
         countOText.text = "O Count: " + countO.ToString();
         if (countO == 3)
         {
-            winText.text = "You win!";
+            playerOWinText.text = "Player O wins!";
         }
+    }
+
+    private void SetTurnText()
+    {
+        turnText.text = "Turn: " + turn.ToString();
     }
 }
