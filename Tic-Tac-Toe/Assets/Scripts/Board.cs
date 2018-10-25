@@ -11,39 +11,33 @@ public enum GameMode
 }
 
 public class Board : MonoBehaviour {
-    static private Board S;  // A private Singleton
+    static public Board S;  // A private Singleton
 
-    GameObject haloGO;
+    public GameObject haloGO;
     public GameObject xPieceGO;
     public GameObject oPieceGO;
-
-    private PlayerController playerController;
-
-    public void SetPlayerControllerReference(PlayerController controller)
-    {
-        playerController = controller;
-    }
 
     [Header("Set in Inspector")]
     public Text countXText;
     public Text countOText;
-    public Text winText;
+    public Text turnText;
+    public Text playerXWinText;
+    public Text playerOWinText;
     public Vector3 letterPos; // The place to put the letters
     public GameObject[] lettersList; // An array of the letters
 
     [Header("Set Dynamically")]
-    public int turn; // The current turn
     public int turnMax; // The number of turns 
     public int countX; // The number of X letters in play
     public int countO; // The number of O letters in play
-    public GameObject letter; // The current letter
+    public GameObject Letter; // The current letter
     public GameMode mode = GameMode.idle;
-    private object playerXTurn;
-    private object playerOTurn;
+    public bool isPlayerXTurn;
     private string playerSide;
 
     void Awake()
     {
+        Board.S = this;
         playerSide = "X";
     }
 
@@ -57,7 +51,6 @@ public class Board : MonoBehaviour {
         //Define the Singleton
         S = this;
 
-        turn = 0;
         turnMax = lettersList.Length;
         StartPlayerXTurn();
     }
@@ -65,7 +58,7 @@ public class Board : MonoBehaviour {
     void StartPlayerXTurn()
     {
         // Instantiate X and disable square
-        if (turn = playerXTurn)
+        if (isPlayerXTurn == true)
         {
             GameObject tempGO = Instantiate(xPieceGO);
             tempGO.transform.position = this.gameObject.transform.position;
@@ -73,84 +66,60 @@ public class Board : MonoBehaviour {
             this.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
 
-    }
-
-    void StartPlayerOTurn()
-    {
-        // Instantiate O and disable square
-        if (turn = playerOTurn)
+        if (isPlayerXTurn == false)
         {
             GameObject tempGO = Instantiate(oPieceGO);
             tempGO.transform.position = this.gameObject.transform.position;
             Destroy(haloGO);
             this.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
+
     }
 
-    public void EndTurn()
+    void OnTriggerEnter(Collider other)
     {
-#pragma warning disable CS0618 // Type or member is obsolete
-        if (lettersList [0].GetComponent<GUIText>() == playerSide && lettersList [1].GetComponent<GUIText>() == playerSide && lettersList [2].GetComponent<GUIText>() == playerSide)
-#pragma warning restore CS0618 // Type or member is obsolete
+        if (other.gameObject.CompareTag("X"))
         {
-            GameOver();
+            other.gameObject.SetActive(false);
+            countX = countX + 1;
+            SetCountXText();
         }
-#pragma warning disable CS0618 // Type or member is obsolete
-        if (lettersList [3].GetComponent<GUIText>() == playerSide && lettersList [4].GetComponent<GUIText>() == playerSide && lettersList [5].GetComponent<GUIText>() == playerSide)
-#pragma warning restore CS0618 // Type or member is obsolete
+        if (other.gameObject.CompareTag("O"))
         {
-            GameOver();
+            other.gameObject.SetActive(false);
+            countO = countO + 1;
+            SetCountOText();
         }
-#pragma warning disable CS0618 // Type or member is obsolete
-        if (lettersList [6].GetComponent<GUIText>() == playerSide && lettersList [7].GetComponent<GUIText>() == playerSide && lettersList [8].GetComponent<GUIText>() == playerSide)
-#pragma warning restore CS0618 // Type or member is obsolete
-        {
-            GameOver();
-        }
-#pragma warning disable CS0618 // Type or member is obsolete
-        if (lettersList [0].GetComponent<GUIText>() == playerSide && lettersList [3].GetComponent<GUIText>() == playerSide && lettersList [6].GetComponent<GUIText>() == playerSide)
-#pragma warning restore CS0618 // Type or member is obsolete
-        {
-            GameOver();
-        }
-#pragma warning disable CS0618 // Type or member is obsolete
-        if (lettersList [1].GetComponent<GUIText>() == playerSide && lettersList [4].GetComponent<GUIText>() == playerSide && lettersList [7].GetComponent<GUIText>() == playerSide)
-#pragma warning restore CS0618 // Type or member is obsolete
-        {
-            GameOver();
-        }
-#pragma warning disable CS0618 // Type or member is obsolete
-        if (lettersList [2].GetComponent<GUIText>() == playerSide && lettersList [5].GetComponent<GUIText>() == playerSide && lettersList [8].GetComponent<GUIText>() == playerSide)
-#pragma warning restore CS0618 // Type or member is obsolete
-        {
-            GameOver();
-        }
-#pragma warning disable CS0618 // Type or member is obsolete
-        if (lettersList [0].GetComponent<GUIText>() == playerSide && lettersList [4].GetComponent<GUIText>() == playerSide && lettersList [8].GetComponent<GUIText>() == playerSide)
-#pragma warning restore CS0618 // Type or member is obsolete
-        {
-            GameOver();
-        }
-#pragma warning disable CS0618 // Type or member is obsolete
-        if (lettersList [2].GetComponent<GUIText>() == playerSide && lettersList [4].GetComponent<GUIText>() == playerSide && lettersList [6].GetComponent<GUIText>() == playerSide)
-#pragma warning restore CS0618 // Type or member is obsolete
-        {
-            GameOver();
-        }
-
-        ChangeSides();
     }
 
-    void ChangeSides()
+    private void SetCountXText()
     {
-        playerSide = (playerSide == "X") ? "O" : "X";
-    }
-
-    void GameOver()
-    {
-        for (int i = 0; i < lettersList.Length; i++)
+        countXText.text = "X Count: " + countX.ToString();
+        if (countX == 3)
         {
-            lettersList[i].GetComponentInParent<Letter>().interactable = false;
+            playerXWinText.text = "Player X Wins!";
         }
     }
+
+    private void SetCountOText()
+    {
+        countOText.text = "O Count: " + countO.ToString();
+        if (countO == 3)
+        {
+            playerOWinText.text = "Player O wins!";
+        }
+    }
+
+    private void SetTurnText()
+    {
+        turnText.text = "Turn: " + isPlayerXTurn.ToString();
+    }
+
+    //void GameOver()
+    //{
+    //for (int i = 0; i < lettersList.Length; i++)
+    //{
+    //lettersList[i].GetComponentInParent<Letter>().interactable = false;
+    //}
+    //}
 }

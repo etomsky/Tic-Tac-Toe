@@ -201,12 +201,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 234957608}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 0, z: -0.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.041666668, y: 0, z: -0.041666668}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &234957610
 BoxCollider:
@@ -231,12 +231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &282840810
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,65 +602,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815349554}
---- !u!1 &839163507
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 839163510}
-  - component: {fileID: 839163509}
-  - component: {fileID: 839163508}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &839163508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 839163507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xPieceGO: {fileID: 0}
-  oPieceGo: {fileID: 0}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
---- !u!65 &839163509
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 839163507}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &839163510
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 839163507}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974210077
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,12 +625,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974210077}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.25, y: 0, z: -2.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.375, y: 0, z: -0.375}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &974210079
 BoxCollider:
@@ -716,12 +655,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &1036240009
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,12 +682,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1036240009}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 0, z: -0.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2916667, y: 0, z: -0.041666668}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1036240011
 BoxCollider:
@@ -775,12 +712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &1063117640
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,12 +739,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1063117640}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 0, z: -2.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.041666668, y: 0, z: -0.375}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1063117642
 BoxCollider:
@@ -834,12 +769,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &1250690126
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,12 +796,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1250690126}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.25, y: 0, z: 1.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.375, y: 0, z: 0.2916667}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1250690128
 BoxCollider:
@@ -893,12 +826,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &1297301159
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,12 +853,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1297301159}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 0, z: 1.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.041666668, y: 0, z: 0.2916667}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1297301161
 BoxCollider:
@@ -952,12 +883,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &1305414956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1171,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578556931
 GameObject:
@@ -1267,12 +1196,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1578556931}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.25, y: 0, z: -0.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.375, y: 0, z: -0.041666668}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1578556933
 BoxCollider:
@@ -1297,12 +1226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &1606261120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,12 +1253,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1606261120}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 0, z: -2.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2916667, y: 0, z: -0.375}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1606261122
 BoxCollider:
@@ -1356,12 +1283,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &1670880561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1322,15 @@ Transform:
   - {fileID: 1527804178}
   - {fileID: 739335589}
   - {fileID: 1330390876}
+  - {fileID: 1250690127}
+  - {fileID: 1297301160}
+  - {fileID: 1855412337}
+  - {fileID: 1578556932}
+  - {fileID: 234957609}
+  - {fileID: 1036240010}
+  - {fileID: 974210078}
+  - {fileID: 1063117641}
+  - {fileID: 1606261121}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1468,19 +1402,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512b4ae6298f8074fb902521a28a59f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xPieceGO: {fileID: 0}
-  oPieceGO: {fileID: 0}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  winText: {fileID: 0}
+  haloGO: {fileID: 0}
+  xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  countXText: {fileID: 596014917}
+  countOText: {fileID: 815349556}
+  turnText: {fileID: 1920723777}
+  playerXWinText: {fileID: 801914478}
+  playerOWinText: {fileID: 2135878555}
   letterPos: {x: 0, y: 0, z: 0}
-  letters: []
-  turn: 0
+  lettersList: []
   turnMax: 0
   countX: 0
   countO: 0
-  letter: {fileID: 0}
+  Letter: {fileID: 0}
   mode: 0
+  isPlayerXTurn: 0
 --- !u!1 &1855412336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,12 +1441,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855412336}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: -0.08984375, z: 1.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2916667, y: -0.8984375, z: 0.2916667}
+  m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1855412338
 BoxCollider:
@@ -1534,12 +1471,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
-  oPieceGo: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  countXText: {fileID: 0}
-  countOText: {fileID: 0}
-  turnText: {fileID: 0}
-  winText: {fileID: 0}
+  oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  tGO: {fileID: 0}
 --- !u!1 &1920723775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,7 +1640,7 @@ RectTransform:
   - {fileID: 1920723776}
   - {fileID: 2135878554}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
