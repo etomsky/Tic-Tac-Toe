@@ -33,18 +33,11 @@ public class Board : MonoBehaviour {
     public GameObject Letter; // The current letter
     public GameMode mode = GameMode.idle;
     public bool isPlayerXTurn;
-    private string playerSide;
 
     void Awake()
     {
         Board.S = this;
-        playerSide = "X";
     }
-
-    public string GetPlayerSide()
-    {
-        return playerSide;
-    } 
 
     void Start()
     {
@@ -52,44 +45,7 @@ public class Board : MonoBehaviour {
         S = this;
 
         turnMax = lettersList.Length;
-        StartPlayerXTurn();
-    }
-
-    void StartPlayerXTurn()
-    {
-        // Instantiate X and disable square
-        if (isPlayerXTurn == true)
-        {
-            GameObject tempGO = Instantiate(xPieceGO);
-            tempGO.transform.position = this.gameObject.transform.position;
-            Destroy(haloGO);
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        }
-
-        if (isPlayerXTurn == false)
-        {
-            GameObject tempGO = Instantiate(oPieceGO);
-            tempGO.transform.position = this.gameObject.transform.position;
-            Destroy(haloGO);
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        }
-
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("X"))
-        {
-            other.gameObject.SetActive(false);
-            countX = countX + 1;
-            SetCountXText();
-        }
-        if (other.gameObject.CompareTag("O"))
-        {
-            other.gameObject.SetActive(false);
-            countO = countO + 1;
-            SetCountOText();
-        }
+        //StartPlayerXTurn();
     }
 
     private void SetCountXText()

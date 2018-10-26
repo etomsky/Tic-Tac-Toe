@@ -204,7 +204,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.041666668, y: 0, z: -0.041666668}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 1158515432}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -231,10 +232,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 1158515431}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
 --- !u!1 &282840810
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +310,206 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &325060548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 325060549}
+  - component: {fileID: 325060550}
+  m_Layer: 0
+  m_Name: Square2Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &325060549
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325060548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1297301160}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &325060550
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325060548}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
+--- !u!1 &498031574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 498031575}
+  - component: {fileID: 498031576}
+  m_Layer: 0
+  m_Name: Square8Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498031575
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 498031574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1063117641}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &498031576
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 498031574}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
+--- !u!1 &568378184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 568378185}
+  - component: {fileID: 568378186}
+  m_Layer: 0
+  m_Name: Square9Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &568378185
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568378184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1606261121}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &568378186
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568378184}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278647293
+  m_Size: 1
+--- !u!1 &580585595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 580585596}
+  - component: {fileID: 580585597}
+  m_Layer: 0
+  m_Name: Square4Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580585596
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 580585595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1578556932}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &580585597
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 580585595}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
+--- !u!1 &595426393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 595426394}
+  - component: {fileID: 595426395}
+  m_Layer: 0
+  m_Name: Square7Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &595426394
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595426393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 974210078}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &595426395
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595426393}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
 --- !u!1 &596014915
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +656,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 739335588}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &789933824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 789933825}
+  - component: {fileID: 789933826}
+  m_Layer: 0
+  m_Name: Square1Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &789933825
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789933824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1666667, y: 10, z: 0.1666667}
+  m_Children: []
+  m_Father: {fileID: 1250690127}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &789933826
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789933824}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
 --- !u!1 &801914476
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +737,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 801914476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -626,9 +868,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974210077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.375, y: 0, z: -0.375}
+  m_LocalPosition: {x: -0.365, y: 0, z: -0.365}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 595426394}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -655,10 +898,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 595426393}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
 --- !u!1 &1036240009
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,9 +927,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1036240009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2916667, y: 0, z: -0.041666668}
+  m_LocalPosition: {x: 0.365, y: 0, z: -0.041666668}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 1657859959}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -712,10 +957,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 1657859958}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
 --- !u!1 &1063117640
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,9 +986,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1063117640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.041666668, y: 0, z: -0.375}
+  m_LocalPosition: {x: -0.041666668, y: 0, z: -0.365}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 498031575}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -769,10 +1016,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 498031574}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
+--- !u!1 &1158515431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1158515432}
+  - component: {fileID: 1158515433}
+  m_Layer: 0
+  m_Name: Square5Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1158515432
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158515431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 234957609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &1158515433
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158515431}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
 --- !u!1 &1250690126
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,9 +1085,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1250690126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.375, y: 0, z: 0.2916667}
+  m_LocalPosition: {x: -0.375, y: 0, z: 0.365}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 789933825}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -826,10 +1115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 789933824}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
 --- !u!1 &1297301159
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,9 +1144,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1297301159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.041666668, y: 0, z: 0.2916667}
+  m_LocalPosition: {x: -0.041666668, y: 0, z: 0.365}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 325060549}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -883,10 +1174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 325060548}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
 --- !u!1 &1305414956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1403,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1527804177}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1552274686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1552274688}
+  - component: {fileID: 1552274687}
+  m_Layer: 0
+  m_Name: BoardHalo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!122 &1552274687
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552274686}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
+--- !u!4 &1552274688
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552274686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670880562}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1570357920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,7 +1531,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.375, y: 0, z: -0.041666668}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 580585596}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1226,10 +1559,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 580585595}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
 --- !u!1 &1606261120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,9 +1588,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1606261120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2916667, y: 0, z: -0.375}
+  m_LocalPosition: {x: 0.365, y: 0, z: -0.365}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 568378185}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1283,10 +1618,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 568378184}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
+--- !u!1 &1657859958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1657859959}
+  - component: {fileID: 1657859960}
+  m_Layer: 0
+  m_Name: Square6Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1657859959
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657859958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036240010}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &1657859960
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657859958}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
 --- !u!1 &1670880561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1674,6 @@ GameObject:
   - component: {fileID: 1670880562}
   - component: {fileID: 1670880565}
   - component: {fileID: 1670880564}
-  - component: {fileID: 1670880563}
   - component: {fileID: 1670880566}
   m_Layer: 0
   m_Name: Board
@@ -1331,22 +1706,10 @@ Transform:
   - {fileID: 974210078}
   - {fileID: 1063117641}
   - {fileID: 1606261121}
+  - {fileID: 1552274688}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1670880563
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 65382017868158266, guid: 3c63cab30f444a9498dc5644a7819786,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1670880561}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1670880564
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1402,7 +1765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512b4ae6298f8074fb902521a28a59f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  haloGO: {fileID: 0}
+  haloGO: {fileID: 1552274686}
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
   countXText: {fileID: 596014917}
@@ -1411,13 +1774,62 @@ MonoBehaviour:
   playerXWinText: {fileID: 801914478}
   playerOWinText: {fileID: 2135878555}
   letterPos: {x: 0, y: 0, z: 0}
-  lettersList: []
+  lettersList:
+  - {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
+  - {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  - {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
+  - {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  - {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
+  - {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  - {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
+  - {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
+  - {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   turnMax: 0
   countX: 0
   countO: 0
-  Letter: {fileID: 0}
+  Letter: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   mode: 0
-  isPlayerXTurn: 0
+  isPlayerXTurn: 1
+--- !u!1 &1783375813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1783375814}
+  - component: {fileID: 1783375815}
+  m_Layer: 0
+  m_Name: Square3Halo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1783375814
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783375813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1855412337}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &1783375815
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783375813}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
 --- !u!1 &1855412336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,9 +1854,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855412336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2916667, y: -0.8984375, z: 0.2916667}
+  m_LocalPosition: {x: 0.365, y: 0, z: 0.365}
   m_LocalScale: {x: 0.16666667, y: 10, z: 0.16666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 1783375814}
   m_Father: {fileID: 1670880562}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1471,10 +1884,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bde06fa3ab26d149bfcaeb2923b6e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  haloGO: {fileID: 1783375813}
   isPlayerXTurn: 1
   xPieceGO: {fileID: 1603987724569514, guid: cb2e6df513950e4448f1545764e79134, type: 2}
   oPieceGO: {fileID: 1160887571693310, guid: f0b3675eaa0dc4945881aaccb3980648, type: 2}
-  tGO: {fileID: 0}
+  tempGO: {fileID: 0}
 --- !u!1 &1920723775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,7 +2102,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2135878553}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 

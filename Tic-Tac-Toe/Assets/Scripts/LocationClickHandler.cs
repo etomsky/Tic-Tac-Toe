@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class LocationClickHandler : MonoBehaviour {
 
-    GameObject haloGO;
+    public GameObject haloGO;
     public bool isPlayerXTurn;
     public GameObject xPieceGO;
     public GameObject oPieceGO;
-    public GameObject tGO;
+    public GameObject tempGO;
 
     // Use this for initialization
     private void Awake() {}
@@ -30,17 +30,39 @@ public class LocationClickHandler : MonoBehaviour {
         }
     }
 
+    private void OnMouseDown()
+    {
+        if (Board.S.isPlayerXTurn == true)
+        {
+            GameObject tempGO = Instantiate(xPieceGO);
+            tempGO.transform.position = this.gameObject.transform.position;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            Board.S.isPlayerXTurn = !Board.S.isPlayerXTurn;
+        }
+        else
+        {
+            GameObject tempGO = Instantiate(oPieceGO);
+            tempGO.transform.position = this.gameObject.transform.position;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            Board.S.isPlayerXTurn = !Board.S.isPlayerXTurn;
+        }
+    }
+
     public void Turn()
     {
         if (Board.S.isPlayerXTurn == true)
         {
-            tGO = Instantiate(xPieceGO);
+            GameObject tempGO = Instantiate(xPieceGO);
+            tempGO.transform.position = this.gameObject.transform.position;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            Board.S.isPlayerXTurn = !Board.S.isPlayerXTurn;
         }
         else
         {
-            tGO = Instantiate(oPieceGO);
+            GameObject tempGO = Instantiate(oPieceGO);
+            tempGO.transform.position = this.gameObject.transform.position;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            Board.S.isPlayerXTurn = !Board.S.isPlayerXTurn;
         }
-        this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        Board.S.isPlayerXTurn = !Board.S.isPlayerXTurn;
     }
 }
